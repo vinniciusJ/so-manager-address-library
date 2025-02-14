@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: so-manager-address
+  datasource:
+    url: jdbc:postgresql://localhost:5432/so
+    username: esi
+    password: esi
+    driver-class-name: org.postgresql.Driver
