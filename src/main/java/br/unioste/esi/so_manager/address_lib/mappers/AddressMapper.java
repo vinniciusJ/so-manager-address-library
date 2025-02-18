@@ -3,6 +3,7 @@ package br.unioste.esi.so_manager.address_lib.mappers;
 
 import br.unioste.esi.so_manager.address_lib.domains.dtos.*;
 import br.unioste.esi.so_manager.address_lib.domains.dtos.external.ExternalAddressDTO;
+import br.unioste.esi.so_manager.address_lib.domains.dtos.forms.AddressFormDTO;
 import br.unioste.esi.so_manager.address_lib.domains.entities.Address;
 import br.unioste.esi.so_manager.address_lib.domains.entities.City;
 import br.unioste.esi.so_manager.address_lib.domains.entities.Location;
@@ -52,6 +53,18 @@ public class AddressMapper {
                 .city(city)
                 .location(location)
                 .neighborhood(neighborhood)
+                .build();
+    }
+
+    public static Address convertFormDTOToEntity(AddressFormDTO addressForm,
+                                                 Neighborhood neighborhood,
+                                                 Location location,
+                                                 City city) {
+        return Address.builder()
+                .zipCode(addressForm.getZipCode())
+                .neighborhood(neighborhood)
+                .location(location)
+                .city(city)
                 .build();
     }
 }

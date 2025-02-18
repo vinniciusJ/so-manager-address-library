@@ -1,4 +1,4 @@
-package br.unioste.esi.so_manager.address_lib.domains.dtos.external;
+  package br.unioste.esi.so_manager.address_lib.domains.dtos.external;
 
 import lombok.Builder;
 import lombok.Data;
