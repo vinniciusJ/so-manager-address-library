@@ -7,6 +7,7 @@ import lombok.*;
 @Table(name = "location_type")
 @NoArgsConstructor @AllArgsConstructor
 @Data @Builder
+@ToString
 public class LocationType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
