@@ -5,7 +5,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "br.unioste.esi.os"
+group = "br.unioeste.esi.os"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -36,7 +36,7 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
-            groupId = "br.unioste.esi.os"
+            groupId = "br.unioeste.esi.os"
             artifactId = "endereco"
             version = "1.0-SNAPSHOT"
         }
