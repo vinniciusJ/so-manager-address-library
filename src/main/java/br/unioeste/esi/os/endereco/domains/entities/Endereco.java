@@ -19,7 +19,7 @@ public class Endereco {
     private String cep;
 
     @ManyToOne
-    @JoinColumn(name = "id_bairo")
+    @JoinColumn(name = "id_bairro")
     private Bairro bairro;
 
     @ManyToOne

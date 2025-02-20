@@ -18,6 +18,6 @@ public class Logradouro {
     private String nome;
 
     @ManyToOne
-    @JoinColumn(name = "id_tipo_logradouro")
+    @JoinColumn(name = "sigla_tipo_logradouro")
     private TipoLogradouro tipoLogradouro;
 }
