@@ -1,11 +1,11 @@
 plugins {
-    id("java-library") // Library plugin
+    id("java-library")
     id("org.springframework.boot") version "3.2.0"
     id("io.spring.dependency-management") version "1.1.3"
-    id("maven-publish") // For publishing
+    id("maven-publish")
 }
 
-group = "br.unioste.esi.so-manager"
+group = "br.unioste.esi.os"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -15,7 +15,7 @@ repositories {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21)) // Use your desired JDK version
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
@@ -31,17 +31,17 @@ tasks.bootJar { enabled = false }
 tasks.jar { enabled = true }
 
 
-// Configure Maven Publishing
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
-            groupId = "br.unioste.esi.so-manager"
-            artifactId = "address-library"
+            groupId = "br.unioste.esi.os"
+            artifactId = "endereco"
             version = "1.0-SNAPSHOT"
         }
     }
     repositories {
-        mavenLocal() // Publish to local Maven repository
+        mavenLocal()
     }
 }
